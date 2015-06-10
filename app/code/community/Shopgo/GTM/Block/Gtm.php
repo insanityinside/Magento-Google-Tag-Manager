@@ -95,7 +95,11 @@ class Shopgo_GTM_Block_Gtm extends Mage_Core_Block_Template
 			// Build products array.
 			foreach ($order->getAllVisibleItems() as $item) {
 				$product = $item->getProduct();
-				$product_categories = array();
+                                if (empty($product)) { // Covering for Magento CE 1.6 / EE 1.11.0.0
+                                    $product = Mage::getModel('catalog/product')->load($item->getProductId());
+                                }
+
+                                $product_categories = array();
 				try {
 					$product_categories = $product->getCategoryIds();
 				} catch (Mage_Exception $e) {
