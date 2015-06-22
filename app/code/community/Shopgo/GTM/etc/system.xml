@@ -46,7 +46,7 @@
 							<show_in_default>1</show_in_default>
 							<show_in_website>1</show_in_website>
 							<show_in_store>1</show_in_store>
-							<comment><![CDATA[Send information to google analytics about the current customer and the succesful transacion in the success page.]]></comment>
+							<comment><![CDATA[Send information to google analytics about the current customer and the succesful transaction in the success page.]]></comment>
 							<depends><active>1</active></depends>
 						</datalayer>
 					</fields>
